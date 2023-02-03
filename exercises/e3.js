@@ -5,6 +5,12 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  let answer=0;
+   for(let x of array){
+    
+   answer += x;
+   }
+  return answer/ array.length;
 
 }
 

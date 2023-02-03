@@ -5,7 +5,20 @@
 
 export function getClientWithLeastBalance(array) {
   // Your code goes here...
+  let leastBalance;
+  let client;
+  let newArray=[];
+  for (let i = 0; i < array.length; i++) {
 
+    if (leastBalance===undefined ||array[i].balance < leastBalance && array[i].balance > 0) {
+      leastBalance = array[i].balance;
+      newArray.pop(client);
+      client =array[i];
+      newArray.push(array[i])
+    }
+  }
+
+  return newArray;
 }
 
 // === TEST YOURSELF ===

@@ -7,7 +7,17 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+  let result = true;
+  for (let figure of array) {
+    if (figure === value) {
+      result = true;
+      break;
+    } 
+    if (figure !== value) {
+      result = false;
+    }
+  }
+  return result;
 }
 
 

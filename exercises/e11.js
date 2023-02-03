@@ -5,7 +5,24 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  let newArray = [];
+  let withdrawalArray = [];
 
+  for (let withdrawal of array) {
+    if (withdrawal.withdrawals === undefined) {
+      withdrawal.withdrawals = [0.0];
+    }
+    newArray.push(withdrawal);
+  }
+  for (let withdrawal of newArray) {
+    let total = 0;
+    for (let money of withdrawal.withdrawals) {
+      total += money;
+    }
+    withdrawalArray.push(total);
+  }
+
+  return withdrawalArray;
 }
 
 // === TEST YOURSELF ===

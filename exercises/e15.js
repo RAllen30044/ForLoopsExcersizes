@@ -1,12 +1,19 @@
 
 // EXERCISE 15
 // Please, read the exercise-info/concat.md to get the initial data of what is the expected result of this exercise.
-// concatArrays(['d', 'r', 'a'], ['f', 'y']) => ['d', 'r', 'a', 'f', 'y']
+// concatArrays(['d', 'r', 'a'], ['f', 'y) => ['d', 'r', 'a', 'f', 'y']
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
-
+  let newArray=[];
+  for(let letter of arr1){
+    newArray.push(letter);
+  }
+  for(let letter of arr2){
+    newArray.push(letter);
+  }
+return newArray;
 }
 
 
